@@ -1,0 +1,54 @@
+{
+    "name": "sapneshnaik/laravel-purchasing-power-parity",
+    "description": "Make your products affordable to everyone around the world.",
+    "keywords": [
+        "sapneshnaik",
+        "laravel-purchasing-power-parity"
+    ],
+    "homepage": "https://github.com/sapneshnaik/laravel-purchasing-power-parity",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Sapnesh Naik",
+            "email": "sapnesh@kerneldev.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.1",
+        "illuminate/support": "^6.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^4.0",
+        "phpunit/phpunit": "^8.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "SapneshNaik\\LaravelPurchasingPowerParity\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "SapneshNaik\\LaravelPurchasingPowerParity\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "SapneshNaik\\LaravelPurchasingPowerParity\\LaravelPurchasingPowerParityServiceProvider"
+            ],
+            "aliases": {
+                "LaravelPurchasingPowerParity": "SapneshNaik\\LaravelPurchasingPowerParity\\LaravelPurchasingPowerParityFacade"
+            }
+        }
+    }
+}
